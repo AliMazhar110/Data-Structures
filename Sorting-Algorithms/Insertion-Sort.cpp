@@ -1,17 +1,26 @@
 #include <iostream>
 using namespace std;
 
-void insertion_sort(int *arr, int n){
-    
-}
-
 void display(int arr[], int n){
     cout << "\nArray = ";
     for(int i=0;i<n;i++){
         cout << arr[i] << " ";
     }
-    cout << endl;
 }
+
+void insertion_sort(int arr[], int n){
+    for(int i=1;i<n;i++){
+        int key = arr[i];
+        int j = i-1;
+        while(j>=0 && key<arr[j]){
+            arr[j+1] = arr[j];
+            j = j-1;       
+        }
+        arr[j+1] = key;
+        display(arr, n);
+    }
+}
+
 
 void get_element(int arr[], int n){
     for(int i=0;i<n;i++){
