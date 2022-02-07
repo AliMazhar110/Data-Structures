@@ -1,6 +1,17 @@
 #include<iostream>
 using namespace std;
 
+void display(int arr[], int n){
+    cout << "\nArray = ";
+    for(int i=0;i<n;i++){
+        cout << arr[i] << " ";
+    }
+}
+
+void insertion_sort(int arr[], int n){
+    
+}
+
 void get_element(int arr[], int n){
     for(int i=0;i<n;i++){
         cout << "Enter A Number = ";
