@@ -20,7 +20,7 @@ void insertion_sort(int arr[], int n, int i){
     }
     arr[j+1] = key;
     display(arr,n);
-    return insertion_sort(arr, n, i+1);
+    insertion_sort(arr, n, i+1);
 }
 
 void get_element(int arr[], int n){
