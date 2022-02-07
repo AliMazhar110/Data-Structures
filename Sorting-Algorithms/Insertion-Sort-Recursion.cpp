@@ -8,8 +8,16 @@ void display(int arr[], int n){
     }
 }
 
-void insertion_sort(int arr[], int n){
-    
+void insertion_sort(int arr[], int n, int i){
+    int key = arr[i];
+    int j = i-1;
+    while(j>=0 && arr[j]>key){
+        arr[j+1] = arr[j];
+        j=j-1;
+    }
+    arr[j+1] = key;
+    display(arr,n);
+    return insertion_sort(arr, n, i+1);
 }
 
 void get_element(int arr[], int n){
@@ -27,6 +35,6 @@ int main(void){
     cout << endl;
     get_element(arr,n);
     display(arr,n);
-    insertion_sort(arr,n);
+    insertion_sort(arr,n,1);
     return 0;
 }
