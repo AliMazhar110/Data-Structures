@@ -9,6 +9,9 @@ void display(int arr[], int n){
 }
 
 void insertion_sort(int arr[], int n, int i){
+    if(i==n){
+        return;
+    }   
     int key = arr[i];
     int j = i-1;
     while(j>=0 && arr[j]>key){
