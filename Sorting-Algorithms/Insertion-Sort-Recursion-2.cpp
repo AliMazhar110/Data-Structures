@@ -38,5 +38,6 @@ int main(void){
     get_element(arr,n);
     display(arr,n);
     insertion_sort(arr,n);
+    display(arr,n);
     return 0;
 }
