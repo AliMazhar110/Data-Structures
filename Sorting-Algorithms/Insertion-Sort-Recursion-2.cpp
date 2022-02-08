@@ -8,7 +8,12 @@ void display(int arr[], int n){
 }
 
 void insertion_sort(int arr[], int n){
-
+    if(n<=1){
+        return;
+    }
+    insertion_sort(arr,n-1);
+    int k = arr[n-1];
+    int j = n-2;
 }
 
 void get_element(int arr[], int n){
