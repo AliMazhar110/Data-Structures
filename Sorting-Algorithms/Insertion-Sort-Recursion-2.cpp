@@ -9,17 +9,17 @@ void display(int arr[], int n){
 }
 
 void insertion_sort(int arr[], int n){
-    if(n<=1){
+    if(n<=1){                 // O(1) ... (i)
         return;
     }
-    insertion_sort(arr,n-1);
-    int k = arr[n-1];
-    int j = n-2;
-    while(j>=0 && arr[j]>k){
-        arr[j+1] = arr[j];
-        j-=1;
+    insertion_sort(arr,n-1);  // O(n) WORST/BEST/AVERAGE ... (ii)
+    int k = arr[n-1];         // O(1) ... (iii)
+    int j = n-2;              // O(1) ... (iv)
+    while(j>=0 && arr[j]>k){  // O(n) WORST / O(1) BEST ... (v)
+        arr[j+1] = arr[j];    // O(1) ... (vi)
+        j-=1;                 // O(1) ... (vii)
     }
-    arr[j+1] = k;
+    arr[j+1] = k;             // O(1) ... (viii)
 }
 
 void get_element(int arr[], int n){
